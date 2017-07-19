@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>All teams</title>
+</head>
+<body>
+    <h1 align="center">All Teams</h1>
+    <table align="center" width="500px">
+        <!--<tr>
+            <th>
+                <h3>Team</h3>
+            </th>
+            <th>
+                <h3>City</h3>
+            </th>
+        </tr>-->
+        {% for team in teams %}
+        <tr>
+            <th>
+                <a href="/team/{{team.id}}"><p>{{team.name}}</p></a>
+            </th>
+            <th>
+                <p>{{team.city}}</p>
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/team/"><p>Add new team</p></a>
+</body>
+</html>

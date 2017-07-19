@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>File Manager</title>
+</head>
+<body>
+    <p><a href="/{{path_back}}">..</a></p>
+    % for d in dirs:
+        <p><a href="/{{path}}--{{d}}">{{d}}</a></p>
+    % end
+    % for f in files:
+        <p>{{f[0]}}     |     {{f[1]}} bytes</p>
+    % end
+</body>
+</html>

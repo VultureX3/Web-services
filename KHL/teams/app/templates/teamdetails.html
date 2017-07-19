@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Team Details</title>
+</head>
+<body>
+    <table align="right" id="del">
+        <tr>
+            <th>
+                <form method="post">
+                <button type="submit" class="btn btn-default">Delete Team</button>
+                    </form>
+            </th>
+        </tr>
+    </table>
+    <table id="content" align="center">
+        <tr>
+            <th><h1>{{team.name}}</h1></th>
+        </tr>
+        <tr>
+            <th><h3>{{team.city}}</h3></th>
+        </tr>
+    </table>
+    <table id="main" align="center" width="700px" style="margin-top: 50px">
+        {% for player in players %}
+        <tr>
+            <th>
+                <p>{{player.first_name}}</p>
+            </th>
+            <th>
+                <p>{{player.last_name}}</p>
+            </th>
+            <th>
+                <p>{{player.birthday}}</p>
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/team/{{team.id}}/player/"><p>Add new player</p></a>
+    <a href="/"><p>All teams</p></a>
+    <hr />
+</body>
+</html>

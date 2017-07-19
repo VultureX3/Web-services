@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h1 align="center">Log</h1>
+    <table align="center" width="900px">
+        <tr>
+            <th>
+                <h3>ip</h3>
+            </th>
+            <th>
+                <h3>url</h3>
+            </th>
+            <th>
+                <h3>time</h3>
+            </th>
+            <th>
+                <h3>success</h3>
+            </th>
+        </tr>
+        {% for log in logs %}
+        <tr>
+            <th>
+                <p>{{log.ip}}</p>
+            </th>
+            <th>
+                <p>{{log.url}}</p>
+            </th>
+            <th>
+                <p>{{log.time}}</p>
+            </th>
+            <th>
+                <p>{{log.success}}</p>
+            </th>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
